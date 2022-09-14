@@ -35,30 +35,17 @@ class ListFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        val team = arrayOf<Int>()
-        val totalPoints = arrayOf<Int>()
-        val lowPoints = arrayOf<Int>()
-        val highPoints = arrayOf<Int>()
-        val climbPoints = arrayOf<Int>()
+        val team = arrayOf<Int>(3487, 1624, 3012)
+        val totalPoints = arrayOf<Int>(20, 15, 10)
+        val lowPoints = arrayOf<Int>(3, 10, 5)
+        val highPoints = arrayOf<Int>(100, 20, 1)
+        val climbPoints = arrayOf<Int>(15, 3, 0)
 
         teamArrayList = ArrayList()
 
         for( i in team.indices) {
             val section = Team(team[i], totalPoints[i], lowPoints[i], highPoints[i], climbPoints[i])
             teamArrayList.add(section)
-        }
-
-        binding.teamList.isClickable = true
-        binding.teamList.adapter = TeamAdapter(this, teamArrayList)
-        binding.teamList.setOnItemClickListener { parent, view, position, id ->
-
-            val team = team[position]
-            val totalPoints = totalPoints[position]
-            val lowPoints = lowPoints[position]
-            val highPoints = highPoints[position]
-            val climbPoints = climbPoints[position]
-
-            val i = Intent(this, CreateValueFragment::class.java)
         }
     }
 
