@@ -1,10 +1,12 @@
 package xyz.dewniel.scoutapp
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ListAdapter
 import androidx.navigation.fragment.findNavController
 import xyz.dewniel.scoutapp.databinding.FragmentListBinding
 
@@ -46,7 +48,18 @@ class ListFragment : Fragment() {
             teamArrayList.add(section)
         }
 
-        binding.listview
+        binding.teamList.isClickable = true
+        binding.teamList.adapter = TeamAdapter(this, teamArrayList)
+        binding.teamList.setOnItemClickListener { parent, view, position, id ->
+
+            val team = team[position]
+            val totalPoints = totalPoints[position]
+            val lowPoints = lowPoints[position]
+            val highPoints = highPoints[position]
+            val climbPoints = climbPoints[position]
+
+            val i = Intent(this, CreateValueFragment::class.java)
+        }
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
