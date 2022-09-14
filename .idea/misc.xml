@@ -3,12 +3,17 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+<<<<<<< Updated upstream
         <entry key="..\:/Users/dcello1998/Documents/GitHub/ScoutApp/app/src/main/res/layout/activity_main.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/dcello1998/Documents/GitHub/ScoutApp/app/src/main/res/layout/content_main.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/dcello1998/Documents/GitHub/ScoutApp/app/src/main/res/layout/fragment_first.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/dcello1998/Documents/GitHub/ScoutApp/app/src/main/res/layout/fragment_second.xml" value="0.18802083333333333" />
         <entry key="..\:/Users/dcello1998/Documents/GitHub/ScoutApp/app/src/main/res/layout/fragment_third.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/dcello1998/Documents/GitHub/ScoutApp/app/src/main/res/menu/menu_main.xml" value="0.36666666666666664" />
+=======
+        <entry key="..\:/Users/danie/Documents/GitHub/ScoutApp/app/src/main/res/layout/fragment_first.xml" value="0.5541666666666667" />
+        <entry key="..\:/Users/danie/Documents/GitHub/ScoutApp/app/src/main/res/layout/fragment_second.xml" value="0.5541666666666667" />
+>>>>>>> Stashed changes
       </map>
     </option>
   </component>
