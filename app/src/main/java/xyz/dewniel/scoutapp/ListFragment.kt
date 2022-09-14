@@ -6,14 +6,15 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
-import xyz.dewniel.scoutapp.databinding.FragmentSecondBinding
+import xyz.dewniel.scoutapp.databinding.FragmentListBinding
 
 /**
  * A simple [Fragment] subclass as the second destination in the navigation.
  */
-class SecondFragment : Fragment() {
+class ListFragment : Fragment() {
 
-    private var _binding: FragmentSecondBinding? = null
+    private var _binding: FragmentListBinding? = null
+    private lateinit var teamArrayList: ArrayList<Team>
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -24,9 +25,28 @@ class SecondFragment : Fragment() {
             savedInstanceState: Bundle?
     ): View? {
 
-        _binding = FragmentSecondBinding.inflate(inflater, container, false)
+        _binding = FragmentListBinding.inflate(inflater, container, false)
         return binding.root
 
+    }
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
+        val team = arrayOf<Int>()
+        val totalPoints = arrayOf<Int>()
+        val lowPoints = arrayOf<Int>()
+        val highPoints = arrayOf<Int>()
+        val climbPoints = arrayOf<Int>()
+
+        teamArrayList = ArrayList()
+
+        for( i in team.indices) {
+            val section = Team(team[i], totalPoints[i], lowPoints[i], highPoints[i], climbPoints[i])
+            teamArrayList.add(section)
+        }
+
+        binding.listview
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
