@@ -10,8 +10,8 @@
         android:layout_margin="16dp">
 
         <LinearLayout
-            android:layout_width="358dp"
-            android:layout_height="129dp"
+            android:layout_width="wrap_content"
+            android:layout_height="146dp"
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="10dp"
@@ -56,9 +56,9 @@
                 android:text="Climb Points" />
 
             <TextView
+                android:id="@+id/editTotal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/editTotal"
                 android:layout_marginStart="-280dp"
                 android:layout_marginTop="50dp"
                 android:padding="15dp"
@@ -67,27 +67,29 @@
 
             <TextView
                 android:id="@+id/editLow"
-                android:layout_width="wrap_content"
+                android:layout_width="57dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="50dp"
                 android:padding="15dp"
                 android:text="5"
                 android:textSize="26dp" />
+
             <TextView
                 android:id="@+id/editHigh"
-                android:layout_width="wrap_content"
+                android:layout_width="61dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="50dp"
                 android:padding="15dp"
                 android:text="5"
                 android:textSize="26dp" />
+
             <TextView
                 android:id="@+id/editClimb"
-                android:layout_width="wrap_content"
+                android:layout_width="54dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
+                android:layout_marginStart="15dp"
                 android:layout_marginTop="50dp"
                 android:padding="15dp"
                 android:text="5"

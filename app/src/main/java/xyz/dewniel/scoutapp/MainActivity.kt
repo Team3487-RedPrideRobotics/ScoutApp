@@ -9,6 +9,7 @@ import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import android.view.Menu
 import android.view.MenuItem
+import android.content.Intent
 import xyz.dewniel.scoutapp.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -33,8 +34,25 @@ class MainActivity : AppCompatActivity() {
             val section = Team(team[i], totalPoints[i], lowPoints[i], highPoints[i], climbPoints[i])
             teamArrayList.add(section)
         }
-
+        binding.teamList.adapter = TeamAdapter(this, teamArrayList)
         binding.teamList.isClickable = true
+        binding.teamList.setOnItemClickListener { parent, view, position, id ->
+            val team = team[position]
+            val totalPoints = totalPoints[position]
+            val lowPoints = lowPoints[position]
+            val highPoints = highPoints[position]
+            val climbPoints = climbPoints[position]
+
+            val i = Intent(this, UserActivity::class.java)
+            i.putExtra("team", team)
+            i.putExtra("total_points", totalPoints)
+            i.putExtra("low_points", lowPoints)
+            i.putExtra("high_points", highPoints)
+            i.putExtra("climb_points", climbPoints)
+            startActivity(i)
+
+
+        }
 
     }
 
