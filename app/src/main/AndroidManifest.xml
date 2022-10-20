@@ -24,6 +24,17 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".TeamViewer"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.Scoutapp.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.TEAM_VIEWER" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

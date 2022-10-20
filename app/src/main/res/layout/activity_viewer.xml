@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TeamViewer">
+
+    <TextView
+        android:id="@+id/teamName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="3487"
+        android:textColor="@color/black"
+        android:textSize="48sp"
+        android:layout_marginStart="145dp"
+        android:layout_marginTop="140dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/totalPoints"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total Points"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="240dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/climbPoints"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Climb Points"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:layout_marginStart="260dp"
+        android:layout_marginTop="240dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/lowPoints"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Low Points"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="480dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/highPoints"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="High Points"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:layout_marginStart="260dp"
+        android:layout_marginTop="480dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/editTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textColor="@color/black"
+        android:textSize="48sp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="270dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/editClimb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textColor="@color/black"
+        android:textSize="48sp"
+        android:layout_marginStart="300dp"
+        android:layout_marginTop="270dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/editLow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textColor="@color/black"
+        android:textSize="48sp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="510dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/editHigh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textColor="@color/black"
+        android:textSize="48sp"
+        android:layout_marginStart="300dp"
+        android:layout_marginTop="510dp"
+        android:textStyle="bold" />
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

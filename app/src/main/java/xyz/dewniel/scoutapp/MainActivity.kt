@@ -37,13 +37,18 @@ class MainActivity : AppCompatActivity() {
         binding.teamList.adapter = TeamAdapter(this, teamArrayList)
         binding.teamList.isClickable = true
         binding.teamList.setOnItemClickListener { parent, view, position, id ->
-            val team = team[position]
-            val totalPoints = totalPoints[position]
-            val lowPoints = lowPoints[position]
-            val highPoints = highPoints[position]
-            val climbPoints = climbPoints[position]
+            println(position)
+            println(team[position])
+            val team = team[position].toString()
+            println(team)
+            val totalPoints = totalPoints[position].toString()
+            val lowPoints = lowPoints[position].toString()
+            val highPoints = highPoints[position].toString()
+            val climbPoints = climbPoints[position].toString()
 
-            val i = Intent(this, UserActivity::class.java)
+
+
+            val i = Intent(this, TeamViewer::class.java)
             i.putExtra("team", team)
             i.putExtra("total_points", totalPoints)
             i.putExtra("low_points", lowPoints)
