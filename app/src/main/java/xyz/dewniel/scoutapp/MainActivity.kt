@@ -1,14 +1,7 @@
 package xyz.dewniel.scoutapp
 
 import android.os.Bundle
-import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
-import androidx.navigation.findNavController
-import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.navigateUp
-import androidx.navigation.ui.setupActionBarWithNavController
-import android.view.Menu
-import android.view.MenuItem
 import android.content.Intent
 import xyz.dewniel.scoutapp.databinding.ActivityMainBinding
 
@@ -36,11 +29,8 @@ class MainActivity : AppCompatActivity() {
         }
         binding.teamList.adapter = TeamAdapter(this, teamArrayList)
         binding.teamList.isClickable = true
-        binding.teamList.setOnItemClickListener { parent, view, position, id ->
-            println(position)
-            println(team[position])
+        binding.teamList.setOnItemClickListener { _, _, position, _ ->
             val team = team[position].toString()
-            println(team)
             val totalPoints = totalPoints[position].toString()
             val lowPoints = lowPoints[position].toString()
             val highPoints = highPoints[position].toString()
