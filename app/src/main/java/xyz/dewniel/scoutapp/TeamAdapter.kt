@@ -22,6 +22,8 @@ class TeamAdapter(private val context : Activity, private val arrayList : ArrayL
         val highPoints : TextView = view.findViewById(R.id.editHigh)
         val climbPoints : TextView = view.findViewById(R.id.editClimb)
 
+
+
         // appending them into the Array List
         team.text = arrayList[position].team.toString()
         totalPoints.text = arrayList[position].totalPoints.toString()

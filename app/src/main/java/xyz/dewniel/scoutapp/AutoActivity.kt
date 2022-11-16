@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.content.Intent
 import xyz.dewniel.scoutapp.databinding.ActivityMainBinding
 
-class MainActivity : AppCompatActivity() {
+class AutoActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     private lateinit var teamArrayList: ArrayList<Team>
 

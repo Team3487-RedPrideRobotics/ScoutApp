@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TeleActivity">
+
+    <TextView
+        android:id="@+id/Tele"
+        android:layout_width="88dp"
+        android:layout_height="37dp"
+        android:text="Teleop"
+        android:textSize="26dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="161dp"
+        tools:layout_editor_absoluteY="65dp" />
+
+    <Button
+        android:id="@+id/lowPointPlus"
+        android:text="Low Point"
+        android:textSize="26dp"
+        android:textColor="@color/white"
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        tools:layout_editor_absoluteX="55dp"
+        tools:layout_editor_absoluteY="147dp"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/button"
+
+        android:text="High Point"
+        android:textSize="26dp"
+        android:textColor="@color/white"
+
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+
+        tools:layout_editor_absoluteX="55dp"
+        tools:layout_editor_absoluteY="283dp"
+        tools:ignore="MissingConstraints" />
+
+    <CheckBox
+        android:id="@+id/taxi"
+        android:layout_width="129dp"
+        android:layout_height="47dp"
+        android:onClick="onCheckboxClicked"
+        android:text="Climb?"
+        android:textSize="26dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="141dp"
+        tools:layout_editor_absoluteY="432dp" />
+
+    <Button
+        android:id="@+id/nextButton"
+        android:layout_width="100dp"
+        android:layout_height="66dp"
+        android:text="Next"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="155dp"
+        tools:layout_editor_absoluteY="624dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
