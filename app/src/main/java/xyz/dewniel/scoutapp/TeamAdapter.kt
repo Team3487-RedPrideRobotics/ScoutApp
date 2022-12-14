@@ -26,10 +26,10 @@ class TeamAdapter(private val context : Activity, private val arrayList : ArrayL
 
         // appending them into the Array List
         team.text = arrayList[position].team.toString()
-        totalPoints.text = arrayList[position].totalPoints.toString()
-        lowPoints.text = arrayList[position].lowPoints.toString()
-        highPoints.text = arrayList[position].highPoints.toString()
-        climbPoints.text = arrayList[position].climbPoints.toString()
+        totalPoints.text = (arrayList[position].total_points).toString()
+        lowPoints.text = arrayList[position].low_points.toString()
+        highPoints.text = arrayList[position].high_points.toString()
+        climbPoints.text = arrayList[position].climb_points.toString()
 
         return view
     }

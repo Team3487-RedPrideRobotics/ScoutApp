@@ -3,48 +3,52 @@ package xyz.dewniel.scoutapp
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import android.content.Intent
-import xyz.dewniel.scoutapp.databinding.ActivityMainBinding
+import android.view.View
+import xyz.dewniel.scoutapp.databinding.ActivityCreateAutoBinding
+import xyz.dewniel.scoutapp.databinding.ActivityCreateTeamBinding
 
 class AutoActivity : AppCompatActivity() {
-    private lateinit var binding: ActivityMainBinding
+    private lateinit var binding: ActivityCreateAutoBinding
     private lateinit var teamArrayList: ArrayList<Team>
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        binding = ActivityMainBinding.inflate(layoutInflater)
+        binding = ActivityCreateAutoBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val team = arrayOf(3487, 1624, 3012)
-        val totalPoints = arrayOf(20, 15, 10)
-        val lowPoints = arrayOf(3, 10, 5)
-        val highPoints = arrayOf(100, 20, 1)
-        val climbPoints = arrayOf(15, 3, 0)
+        val team = intent.getStringExtra("team")
+        val color = intent.getStringExtra("team_color")
+        var taxi: Boolean = false
 
-        teamArrayList = ArrayList()
+        var lowplus: Int = 0
+        var highplus: Int = 0
 
-        for( i in team.indices) {
-            val section = Team(team[i], totalPoints[i], lowPoints[i], highPoints[i], climbPoints[i])
-            teamArrayList.add(section)
+        binding.lowPointPlus.setOnClickListener() {
+            lowplus++
         }
-        binding.teamList.adapter = TeamAdapter(this, teamArrayList)
-        binding.teamList.isClickable = true
-        binding.teamList.setOnItemClickListener { _, _, position, _ ->
-            val team = team[position].toString()
-            val totalPoints = totalPoints[position].toString()
-            val lowPoints = lowPoints[position].toString()
-            val highPoints = highPoints[position].toString()
-            val climbPoints = climbPoints[position].toString()
+
+        binding.highpointplus.setOnClickListener() {
+            highplus++
+        }
 
 
 
-            val i = Intent(this, TeamViewer::class.java)
+        binding.nextButton.setOnClickListener() {
+
+            val i = Intent(this, TeleActivity::class.java)
             i.putExtra("team", team)
-            i.putExtra("total_points", totalPoints)
-            i.putExtra("low_points", lowPoints)
-            i.putExtra("high_points", highPoints)
-            i.putExtra("climb_points", climbPoints)
+            i.putExtra("team_color", color)
+            i.putExtra("low_points", lowplus)
+            i.putExtra("high_points", highplus)
+
+            if(binding.taxi.isChecked) {
+                i.putExtra("taxi", true)
+            }
+            else {
+                i.putExtra("taxi", false)
+            }
             startActivity(i)
 
 

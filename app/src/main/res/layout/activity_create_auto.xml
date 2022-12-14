@@ -28,7 +28,7 @@
         tools:layout_editor_absoluteY="147dp" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/highpointplus"
 
         android:layout_width="300dp"
         android:layout_height="100dp"
@@ -48,7 +48,7 @@
         android:onClick="onCheckboxClicked"
         android:text="Taxi?"
         android:textSize="26dp"
-        tools:ignore="MissingConstraints"
+        tools:ignore="MissingConstraints,OnClick"
         tools:layout_editor_absoluteX="155dp"
         tools:layout_editor_absoluteY="411dp" />
 
